@@ -3,7 +3,6 @@ using UnityEngine.Events;
 
 public class NPC : MonoBehaviour
 {
-    // Define un evento para cuando el jugador interactúe con el NPC
     public delegate void NPCInteractEvent();
     public static event NPCInteractEvent onNPCInteract;
 
@@ -18,7 +17,6 @@ public class NPC : MonoBehaviour
 
     private void Interactuar()
     {
-        // Dispara el evento de interacción
         onNPCInteract?.Invoke();
     }
 }
