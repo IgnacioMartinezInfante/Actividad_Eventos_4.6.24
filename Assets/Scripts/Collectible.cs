@@ -19,10 +19,11 @@ public class Collectible : MonoBehaviour
     }
 
     // Detectar colisión con el jugador
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("colisiono");
             Recolectar();
         }
     }
